@@ -1,0 +1,16 @@
+- EchmaScript 6 is the latest standard in JS
+
+
+NODE GLOBAL OBJECTS:
+
+
+Browser				NodeJS
+------------------------------
+			||
+window		||		global
+document	||		process
+history		||		module
+location	||		__filename()	
+navigator	||		require()
+
+

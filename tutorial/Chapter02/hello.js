@@ -1,7 +1,7 @@
-const mission = "hello";
+const mission = process.argv[2] || "hello";
 
 if (mission === "hello") {
-  console.log("Hello There");
+  console.log("You Did Not Pass Any Arguments");
 } else {
-  console.log("We've met earlier I suppose, Welcome Back");
+  console.log(`You passed an argument : ${mission}`);
 }
