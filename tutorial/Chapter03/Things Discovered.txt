@@ -1,0 +1,15 @@
+NodeJS is an asynchronus event-driven javascript runtime
+The most important components of NodeJS are
+
+- JavaScript V8 Engine
+- LibUV [Stores the Node Bindings (fs, http, crypto, path etc, which are written in low-level languages)][Written in C]
+
+Asynchronus Calls Doesn't necessarily runs line by line
+
+JavaScript is a synchronus language, although it does allows us to write code which can be asynchronusly, but it doesn't comes that way out of the box
+
+
+
+Q. Is NodeJS MultiThreaded ??
+A. No, JavaScript is a single threaded language
+
