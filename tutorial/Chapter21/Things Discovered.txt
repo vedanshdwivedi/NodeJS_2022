@@ -1,0 +1,33 @@
+JS Code -> AST -> Interpreter (Gives ByteCode) ---> Profiler ---> Compiler -> Optimised Code
+					(Ignition)									(Turbo Fan)
+
+
+Interpreter : Translate and read line by line, Slower than a compiler (HLL -> ByteCode -> Machine Code)
+Compiler : Translates entire file at once before running (HLL -> Machine Code)
+
+Interpreter is quick to start the code, but running the same code over and over is slower. There, the compiler has an advantage, it starts slowly, but needs to see the code only once (it doesn't needs to recalculate things), so it is optimised.
+JavaScript uses both Interpreter and Compiler, it uses a combination of both, which is called as JIT (Just in Time compiler). V8 Engine has both Interpreter and Compiler under the hood.
+V8 initially uses an interpreter to get the ByteCode, but when it sees that some code is coming again and again, it passes that piece of code to the JIT Compiler to get it optimised. so, gradually speed of JS programs increases.
+
+
+ECMAScript : Governing body and standard for JS Engines
+
+
+Memory Heap : Where are variables and data is stored and memory allocation happens.
+Call Stack : Where the engine keeps tracks of where the code execution is. (Works in First-In, Last-Out mode)
+
+JavaScript automatically frees up memory as soon as scope of variable ends using its Garbage Collector (It uses the mark and sweep algorithm for achieving this).
+
+
+Common Memory Leaks in JavaScript are caused due to the following:
+1. Global Variables
+2. Event Listeners (When we forget to remove it and keep loading the page again and again)
+3. Set Interval (Since the code keeps on running, memory won't be cleared)
+
+
+
+Web API:
+
+1. DOM
+2. Fetch()
+3. setTimeout()
