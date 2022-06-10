@@ -1,0 +1,55 @@
+Promises:
+A promise is an object that may produce a single value some time in the future, either a resolved value, or a reason that it's not resolved. A promise can be into one of the three possible states:
+1. Fulfilled
+2. Rejected
+3. Pending
+
+Promises serve the same purpose as callbacks.
+
+
+Async Await:
+They are a feature of ES6 and are built on top of promises. It makes code easier to read asynchronus code.
+
+
+CODE 1: 
+movePlayer(100, 'left')
+	.then(() => movePlayer(400, 'left'))
+	.then(() => movePlayer(400, 'right'))
+	.then(() => movePlayer(400, 'right'))
+	
+CODE 2:
+async function playerStart() {
+	const firstMove = await movePlayer(100, 'left');
+	await movePlayer(400, 'left');
+	await movePlayer(400, 'left');
+	await movePlayer(400, 'left');
+}
+
+
+CODE 1 works the same as CODE 2
+
+await : Pause this function until I have this result 
+
+
+"..." is an object spread parameter
+"finally" keyword is used to call a function regardless of try/catch block, it does not takes in any parameter
+"for await of" enables us to loop over awaits
+
+
+The ES6 also introduced a JobQueue, which has higher priority than the Callback Queues. The JobQueue stores all the Promises, and promises are executed before executing the callbacks.
+
+
+
+Race (fastest) 
+Parallel (normal)
+Sequence (slowest)
+
+
+
+Promise.all([]) => only works when all promises are fulfilled and none are rejected
+Promise.allSettled([]) => doesn't cares about resolve/reject, returns all the promises
+
+
+
+Thread, Concurrency and Parallelism:
+
